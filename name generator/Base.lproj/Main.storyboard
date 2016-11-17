@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kMP-og-r9b">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Eighth Hour-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="name_generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who will it be?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03D-CG-Avl">
+                                <rect key="frame" x="122" y="266" width="356" height="68"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="57"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woE-od-0e6">
+                                <rect key="frame" x="249" y="368" width="103" height="58"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ES-TM-phj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-5Q-MZ9">
+                                <rect key="frame" x="245" y="550" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="BOq-Ei-hxg"/>
+                                </constraints>
+                                <state key="normal" title="Another Hour">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jxn-Uh-ftw" kind="show" id="Mad-Ao-2Nc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="03D-CG-Avl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3GJ-IE-Qsn"/>
+                            <constraint firstItem="woE-od-0e6" firstAttribute="top" secondItem="03D-CG-Avl" secondAttribute="bottom" constant="34" id="9Xp-lT-7ub"/>
+                            <constraint firstAttribute="bottom" secondItem="gfU-5Q-MZ9" secondAttribute="bottom" constant="20" symbolic="YES" id="HS0-S9-uGv"/>
+                            <constraint firstItem="gfU-5Q-MZ9" firstAttribute="centerX" secondItem="woE-od-0e6" secondAttribute="centerX" id="WJe-Gg-Voo"/>
+                            <constraint firstItem="woE-od-0e6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rlg-zi-KmJ"/>
+                            <constraint firstItem="03D-CG-Avl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xi2-lV-fTz"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tlF-Wk-OCl" appends="YES" id="vL1-F6-caQ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Eighth Hour" id="jYY-Cx-aQP"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="03D-CG-Avl" id="Mto-Qx-eQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tlF-Wk-OCl">
+                    <connections>
+                        <action selector="screenTapped:" destination="BYZ-38-t0r" id="Aew-io-WxX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1147" y="367"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yhU-3s-DDA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kMP-og-r9b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0y2-Yc-lJc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nTE-Sq-74G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpk-fZ-0AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="367"/>
+        </scene>
+        <!--Fourth Hour-->
+        <scene sceneID="onw-lf-OtY">
+            <objects>
+                <viewController id="Jxn-Uh-ftw" customClass="fourthHourVC" customModule="name_generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WpM-zX-BlD"/>
+                        <viewControllerLayoutGuide type="bottom" id="vfA-8Z-JQn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZwF-GJ-KYq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Who will it be?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5m5-Tj-rh8">
+                                <rect key="frame" x="123" y="267" width="356" height="68"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="57"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24X-wv-hUJ">
+                                <rect key="frame" x="231" y="353" width="138" height="73"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="Jxn-Uh-ftw" eventType="touchUpInside" id="fVf-s1-dbH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="24X-wv-hUJ" firstAttribute="top" secondItem="5m5-Tj-rh8" secondAttribute="bottom" constant="34" id="4YI-2t-6cl"/>
+                            <constraint firstItem="24X-wv-hUJ" firstAttribute="centerX" secondItem="ZwF-GJ-KYq" secondAttribute="centerX" id="6IZ-tf-hid"/>
+                            <constraint firstItem="5m5-Tj-rh8" firstAttribute="centerY" secondItem="ZwF-GJ-KYq" secondAttribute="centerY" id="m9e-L0-O3A"/>
+                            <constraint firstItem="5m5-Tj-rh8" firstAttribute="centerX" secondItem="ZwF-GJ-KYq" secondAttribute="centerX" id="u5K-EK-F59"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WDZ-j3-0nE" appends="YES" id="Ygq-ol-IU7"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fourth Hour" id="fdq-zR-Rod"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="5m5-Tj-rh8" id="wqg-iK-4ly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iD6-0L-1yt" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WDZ-j3-0nE">
+                    <connections>
+                        <action selector="screenTapped:" destination="Jxn-Uh-ftw" id="9ih-jz-LbR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1818" y="367"/>
+        </scene>
+    </scenes>
+</document>
